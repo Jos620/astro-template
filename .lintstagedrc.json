@@ -1,6 +1,4 @@
 {
-  "*.{js,cjs,mjs,ts,astro}": [
-    "prettier --write",
-    "eslint"
-  ]
+  "*.{js,cjs,mjs,ts,astro}": ["prettier --write", "eslint"],
+  "*.json": ["prettier --write"]
 }
