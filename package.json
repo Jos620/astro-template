@@ -8,8 +8,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint --ext .js,.ts,.astro .",
-    "lint:fix": "eslint --ext .js,.ts,.astro --fix .",
+    "lint": "eslint --ext .js,cjs,mjs,.ts,.astro .",
+    "lint:fix": "eslint --ext .js,cjs,mjs,.ts,.astro --fix .",
     "format": "prettier --write src",
     "prepare": "husky install"
   },

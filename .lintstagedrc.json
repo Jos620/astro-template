@@ -1,5 +1,5 @@
 {
-  "*.{js,ts,astro}": [
+  "*.{js,cjs,mjs,ts,astro}": [
     "prettier --write",
     "eslint"
   ]
