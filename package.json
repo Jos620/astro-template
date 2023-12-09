@@ -10,7 +10,7 @@
     "astro": "astro",
     "lint": "eslint --ext .js,cjs,mjs,.ts,.astro .",
     "lint:fix": "eslint --ext .js,cjs,mjs,.ts,.astro --fix .",
-    "format": "prettier --write src",
+    "format": "prettier --write .",
     "prepare": "husky install"
   },
   "dependencies": {
