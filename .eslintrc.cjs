@@ -24,8 +24,11 @@ module.exports = {
         extraFileExtensions: [".astro"],
       },
     },
+    {
+      files: ["*.cjs"],
+      rules: {
+        "no-undef": "off",
+      },
+    },
   ],
-  rules: {
-    "no-undef": "off",
-  },
 };
