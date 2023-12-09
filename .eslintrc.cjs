@@ -28,6 +28,7 @@ module.exports = {
       files: ["*.cjs"],
       rules: {
         "no-undef": "off",
+        "@typescript-eslint/no-var-requires": "off",
       },
     },
   ],
