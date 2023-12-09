@@ -1,3 +1,5 @@
+const { compilerOptions } = require("./tsconfig.json");
+
 module.exports = {
   env: {
     browser: true,
@@ -36,7 +38,13 @@ module.exports = {
     "simple-import-sort/imports": [
       "error",
       {
-        groups: [["^\\u0000"], ["^node:"], ["^"], ["^\\."]],
+        groups: [
+          ["^\\u0000"],
+          ["^node:"],
+          ["^"],
+          ["^(" + Object.keys(compilerOptions.paths).join("|") + ")"],
+          ["^\\."],
+        ],
       },
     ],
   },
