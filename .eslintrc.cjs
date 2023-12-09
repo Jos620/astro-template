@@ -14,7 +14,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint", "prettier"],
+  plugins: ["@typescript-eslint", "prettier", "simple-import-sort"],
   overrides: [
     {
       files: ["*.astro"],
@@ -31,4 +31,12 @@ module.exports = {
       },
     },
   ],
+  rules: {
+    "simple-import-sort/imports": [
+      "error",
+      {
+        groups: [["^\\u0000"], ["^node:"], ["^"], ["^\\."]],
+      },
+    ],
+  },
 };
