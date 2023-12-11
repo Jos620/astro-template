@@ -1,10 +1,15 @@
 ---
+import RandomNumber from "@/components/RandomNumber.astro";
 import DefaultLayout from "@/layout/default.astro";
 ---
 
 <DefaultLayout title="Astro Template">
-  <main class="flex items-center justify-center gap-4 h-screen">
-    <h1 class="text-(5xl red center)">Hello, World!</h1>
-    <div class="i-mdi:github w-10 h-10"></div>
+  <main class="h-screen flex flex-col justify-center items-center gap-4">
+    <section class="flex items-center justify-center gap-4">
+      <h1 class="text-(5xl red center)">Hello, World!</h1>
+      <div class="i-mdi:github w-10 h-10"></div>
+    </section>
+
+    <RandomNumber />
   </main>
 </DefaultLayout>
