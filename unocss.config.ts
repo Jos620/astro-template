@@ -13,4 +13,8 @@ export default defineConfig({
     }),
   ],
   transformers: [transformerVariantGroup()],
+  shortcuts: {
+    col: "flex flex-col",
+    center: "flex justify-center items-center",
+  },
 });
