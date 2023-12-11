@@ -13,6 +13,7 @@
     "lint:fix": "eslint --ext .js,cjs,mjs,.ts,.astro --fix .",
     "format": "prettier --write .",
     "prepare": "husky install",
+    "commitlint": "commitlint --edit $1",
     "run:dev": "run-s pre:dev dev",
     "run:lint": "run-s format lint:fix"
   },
@@ -23,6 +24,8 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "@iconify-json/mdi": "^1.1.60",
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "^6.13.2",
