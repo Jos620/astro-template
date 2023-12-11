@@ -6,16 +6,18 @@
     "pre:dev": "kill-port 4321",
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "typecheck": "astro check",
     "lint": "eslint --ext .js,cjs,mjs,.ts,.astro .",
     "lint:fix": "eslint --ext .js,cjs,mjs,.ts,.astro --fix .",
     "format": "prettier --write .",
     "prepare": "husky install",
     "commitlint": "commitlint --edit $1",
     "run:dev": "run-s pre:dev dev",
-    "run:lint": "run-s format lint:fix"
+    "run:lint": "run-s format lint:fix",
+    "run:build": "run-s typecheck build"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.1",
