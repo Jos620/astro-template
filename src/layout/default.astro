@@ -1,23 +1,50 @@
 ---
 interface Props {
-  title: string;
+  title?: string;
+  description?: string;
+  previewImage?: string;
+  url?: string;
+  keywords?: string | string[];
 }
 
-const { title } = Astro.props;
+const {
+  title = "Astro + HTMX template",
+  description = "A template for Astro + HTMX",
+  previewImage = "https://placekitten.com/1200/630",
+  url = "https://astro-template-delta.vercel.app/",
+  keywords,
+} = Astro.props;
+
+const stringifiedKeywords = Array.isArray(keywords)
+  ? keywords.join(", ")
+  : keywords;
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={stringifiedKeywords} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={previewImage} />
+    <meta property="og:url" content={url} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={previewImage} />
+
     <script
       src="https://unpkg.com/htmx.org@1.9.9"
       integrity="sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX"
       crossorigin="anonymous"></script>
-    <title>{title}</title>
   </head>
+
   <body>
     <slot />
   </body>
