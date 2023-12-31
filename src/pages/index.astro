@@ -1,5 +1,4 @@
 ---
-import RandomNumber from "@/components/RandomNumber.astro";
 import DefaultLayout from "@/layout/default.astro";
 ---
 
@@ -10,6 +9,11 @@ import DefaultLayout from "@/layout/default.astro";
       <div class="i-mdi:github w-10 h-10"></div>
     </section>
 
-    <RandomNumber />
+    <button
+      hx-get="/random-number"
+      class="bg-blue-200 text-blue-600 border-(1 blue-500) rounded-xl p-4 hover:(bg-blue-300 shadow-lg)"
+    >
+      Click here to get a random number
+    </button>
   </main>
 </DefaultLayout>
